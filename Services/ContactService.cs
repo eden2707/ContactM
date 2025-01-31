@@ -33,17 +33,17 @@ namespace ContactM.Services
             return newcontact;
         }
 
-/*
-        public async Task<Pokemon> UpdateAsync(int id, Pokemon updatedPokemon)
+
+        public async Task<Contact> UpdateAsync(int id, Contact updatedContact)
         {
-            await _pokemonCollection.ReplaceOneAsync(p => p.Id == id, updatedPokemon);
-            return updatedPokemon;
+            await _contactCollection.ReplaceOneAsync(p => p.Id == id, updatedContact);
+            return updatedContact;
         }
 
         public async Task<bool> DeleteAsync(int id)
         {
-            var result = await _pokemonCollection.DeleteOneAsync(p => p.Id == id);
+            var result = await _contactCollection.DeleteOneAsync(p => p.Id == id);
             return result.DeletedCount > 0;
-        }*/
+        }
     }
 }

@@ -46,26 +46,25 @@ namespace ContactM.Controllers
             return CreatedAtAction(nameof(GetByID), new { id = contact.Id }, contact);
         }
 
-        //[HttpPut("{id}")]
-/*        public async Task<ActionResult<Contact>> UpdateContact(int id, [FromBody] Pokemon updatedPokemon)
+        [HttpPut("{id}")]       public async Task<ActionResult<Contact>> UpdateContact(int id, [FromBody] Contact updatedContact)
         {
-            var updated = await _pokemonService.UpdateAsync(id, updatedPokemon);
+            var updated = await _contactService.UpdateAsync(id, updatedContact);
             if (updated == null)
             {
-                return NotFound($"Pokemon with ID {id} not found.");
+                return NotFound($"Contact with ID {id} not found.");
             }
             return Ok(updated);
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeletePokemon(int id)
+        public async Task<ActionResult> DeleteContact(int id)
         {
-            var deleted = await _pokemonService.DeleteAsync(id);
+            var deleted = await _contactService.DeleteAsync(id);
             if (deleted)
             {
-                return Ok($"Pokemon with ID {id} deleted successfully.");
+                return Ok($"Contact with ID {id} deleted successfully.");
             }
-            return NotFound($"Pokemon with ID {id} not found.");
-        }*/
+            return NotFound($"Contact with ID {id} not found.");
+        }
     }
 }
